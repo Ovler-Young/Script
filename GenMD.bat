@@ -59,7 +59,7 @@ for /r "%attachmentDir%" %%F in (*.emf) do (
 :: replace some characters in the markdown file
 echo Updating Markdown file...
 :: Replace repeated dashes and equal signs
-powershell -NoProfile -Command "$content = Get-Content '%outputFile%'; $content | ForEach-Object { $_ -replace '-{4,}', '---' -replace '={4,}', '===' } | Set-Content '%outputFile%' -Encoding UTF8"
+powershell -NoProfile -Command "$OutputEncoding = [System.Text.Encoding]::UTF8; $content = Get-Content '%outputFile%' -Encoding UTF8; $content | ForEach-Object { $_ -replace '-{4,}', '---' -replace '={4,}', '===' } | Set-Content '%outputFile%' -Encoding UTF8"
 
 echo Process completed.
 exit /b
