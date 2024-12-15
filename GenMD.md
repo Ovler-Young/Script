@@ -1,6 +1,6 @@
 # Document to Markdown Converter (GenMD)
 
-A batch script that converts documents to Markdown format with enhanced features for handling images and formatting.
+A [batch script](./GenMD.bat) that converts documents to Markdown format with enhanced features for handling images and formatting.
 
 ## Prerequisites
 
